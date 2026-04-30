@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PushBoss</title>
+    <meta name="apple-itunes-app" content="app-id=6762020951" />
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #111;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .loading { font-size: 14px; opacity: 0.6; }
+    </style>
+  </head>
+  <body>
+    <div class="loading">Loading…</div>
+    <script>
+      // GitHub Pages serves this file as the body of every 404. Use it to
+      // route deep-link URLs (challenge / invite) to the appropriate landing.
+      // For any other path → App Store.
+      (function () {
+        var p = window.location.pathname;
+        if (/(?:^|\/)pushboss\/challenge\/\d+\/\d+\/\d+/.test(p)) {
+          window.location.replace('/pushboss/challenge.html' + window.location.search + '#' + p);
+          return;
+        }
+        if (/(?:^|\/)pushboss\/invite/.test(p)) {
+          window.location.replace('/pushboss/invite.html' + window.location.search + '#' + p);
+          return;
+        }
+        // Unknown path → home
+        window.location.replace('/');
+      })();
+    </script>
+  </body>
+</html>

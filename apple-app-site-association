@@ -1,0 +1,24 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["LL3A7K88VF.com.pushboss.app"],
+        "components": [
+          {
+            "/": "/pushboss/challenge/*",
+            "comment": "Match challenge deep links"
+          },
+          {
+            "/": "/pushboss/invite/*",
+            "comment": "Match invite deep links"
+          },
+          {
+            "/": "/pushboss/invite",
+            "comment": "Match plain /invite (no code)"
+          }
+        ]
+      }
+    ]
+  }
+}
