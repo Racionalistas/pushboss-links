@@ -1,6 +1,4 @@
 /.well-known/apple-app-site-association /apple-app-site-association 200
 
-/pushboss/invite        /pushboss/invite.html 200
-/pushboss/invite/*      /pushboss/invite.html 200
-/pushboss/challenge     /pushboss/challenge.html 200
-/pushboss/challenge/*   /pushboss/challenge.html 200
+/pushboss/invite/*      /pushboss/invite/index.html 200
+/pushboss/challenge/*   /pushboss/challenge/index.html 200
