@@ -1,123 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PushBoss — Challenge</title>
-    <meta name="apple-itunes-app" content="app-id=6762020951" />
 
-    <!-- Open Graph / link preview (shown by WhatsApp, Telegram, iMessage, Messenger) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="challenge incoming" />
-    <meta property="og:description" content="prove it" />
-    <meta property="og:image" content="https://pushboss-links.pages.dev/og/challenge.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://pushboss-links.pages.dev/pushboss/challenge" />
-    <meta property="og:site_name" content="PushBoss" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PushBoss — Challenge</title>
+  <meta name="apple-itunes-app" content="app-id=6762020951" />
 
-    <!-- Twitter / X card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="challenge incoming" />
-    <meta name="twitter:description" content="prove it" />
-    <meta name="twitter:image" content="https://pushboss-links.pages.dev/og/challenge.png" />
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: linear-gradient(135deg, #ff3860 0%, #b91d3a 100%);
-        min-height: 100vh;
-        display: flex; align-items: center; justify-content: center;
-        padding: 20px; color: #fff;
-      }
-      .card {
-        background: rgba(0,0,0,0.35);
-        border-radius: 24px;
-        padding: 40px 30px;
-        max-width: 360px; width: 100%;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      }
-      .emoji { font-size: 80px; line-height: 1; margin-bottom: 16px; }
-      h1 { font-size: 26px; font-weight: 900; margin-bottom: 8px; }
-      .stats {
-        display: flex; gap: 12px; justify-content: center; margin: 20px 0 28px;
-      }
-      .stat {
-        background: rgba(255,255,255,0.15);
-        border-radius: 12px;
-        padding: 12px 16px; flex: 1;
-      }
-      .stat-value { font-size: 22px; font-weight: 900; }
-      .stat-label { font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-      p.lead { font-size: 16px; opacity: 0.95; margin-bottom: 24px; line-height: 1.4; }
-      .btn {
-        display: block; width: 100%;
-        padding: 16px 24px;
-        background: #fff; color: #b91d3a;
-        font-size: 18px; font-weight: 800;
-        border: none; border-radius: 14px;
-        text-decoration: none;
-        transition: transform 0.1s;
-      }
-      .btn:active { transform: scale(0.97); }
-      .small { margin-top: 14px; font-size: 13px; opacity: 0.7; }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <div class="emoji" id="emoji">⚔️</div>
-      <h1 id="title">Challenge Accepted?</h1>
-      <p class="lead" id="lead">A friend defeated a boss on PushBoss. Can you beat them?</p>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value" id="reps">—</div>
-          <div class="stat-label">reps</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="time">—</div>
-          <div class="stat-label">time</div>
-        </div>
+  <!-- Open Graph / link preview (shown by WhatsApp, Telegram, iMessage, Messenger) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="challenge incoming" />
+  <meta property="og:description" content="prove strength" />
+  <meta property="og:image" content="https://pushboss-links.pages.dev/og/challenge.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://pushboss-links.pages.dev/pushboss/challenge" />
+  <meta property="og:site_name" content="PushBoss" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="challenge incoming" />
+  <meta name="twitter:description" content="prove it" />
+  <meta name="twitter:image" content="https://pushboss-links.pages.dev/og/challenge.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #ff3860 0%, #b91d3a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .emoji {
+      font-size: 80px;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin: 20px 0 28px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 12px 16px;
+      flex: 1;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    p.lead {
+      font-size: 16px;
+      opacity: 0.95;
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      background: #fff;
+      color: #b91d3a;
+      font-size: 18px;
+      font-weight: 800;
+      border: none;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 0.1s;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .small {
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="emoji" id="emoji">⚔️</div>
+    <h1 id="title">Challenge Accepted?</h1>
+    <p class="lead" id="lead">A friend defeated a boss on PushBoss. Can you beat them?</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value" id="reps">—</div>
+        <div class="stat-label">reps</div>
       </div>
-      <a href="https://apps.apple.com/app/id6762020951" class="btn" id="installBtn">Install PushBoss</a>
-      <p class="small">Opening app if installed…</p>
+      <div class="stat">
+        <div class="stat-value" id="time">—</div>
+        <div class="stat-label">time</div>
+      </div>
     </div>
+    <a href="https://apps.apple.com/app/id6762020951" class="btn" id="installBtn">Install PushBoss</a>
+    <p class="small">Opening app if installed…</p>
+  </div>
 
-    <script>
-      // URL format: /pushboss/challenge/{level}/{reps}/{timeMs}
-      // The 404.html may have rewritten us here with the original path in the
-      // hash fragment, so check both.
-      var src = (window.location.hash || '') + ' ' + window.location.pathname;
-      var m = src.match(/challenge\/(\d+)\/(\d+)\/(\d+)/i);
-      var MONSTERS = ['🐭 Mouse','🐀 Rat','👹 Goblin','💀 Skeleton','👺 Orc','🧌 Troll','😈 Demon','🐉 Dragon','👁️ Elder God'];
-      if (m) {
-        var level = parseInt(m[1], 10);
-        var reps = parseInt(m[2], 10);
-        var ms = parseInt(m[3], 10);
-        var sec = Math.round(ms / 1000);
-        var mm = Math.floor(sec / 60);
-        var ss = sec % 60;
-        var monster = MONSTERS[Math.max(0, Math.min(level - 1, MONSTERS.length - 1))] || '👹 Boss';
-        var parts = monster.split(' ');
-        document.getElementById('emoji').textContent = parts[0];
-        document.getElementById('title').textContent = 'Beat ' + parts[1] + '?';
-        document.getElementById('lead').textContent = 'A friend just defeated ' + monster + ' on PushBoss. Think you can beat them?';
-        document.getElementById('reps').textContent = reps;
-        document.getElementById('time').textContent = mm + ':' + (ss < 10 ? '0' + ss : ss);
-        // Try to open app via deep link first
-        setTimeout(function () {
-          window.location = 'pushboss://challenge/' + level + '/' + reps + '/' + ms;
-        }, 250);
-        // Fallback to App Store
-        setTimeout(function () {
-          window.location = 'https://apps.apple.com/app/id6762020951';
-        }, 1500);
-      } else {
-        setTimeout(function () {
-          window.location = 'https://apps.apple.com/app/id6762020951';
-        }, 1500);
-      }
-    </script>
-  </body>
+  <script>
+    // URL format: /pushboss/challenge/{level}/{reps}/{timeMs}
+    // The 404.html may have rewritten us here with the original path in the
+    // hash fragment, so check both.
+    var src = (window.location.hash || '') + ' ' + window.location.pathname;
+    var m = src.match(/challenge\/(\d+)\/(\d+)\/(\d+)/i);
+    var MONSTERS = ['🐭 Mouse', '🐀 Rat', '👹 Goblin', '💀 Skeleton', '👺 Orc', '🧌 Troll', '😈 Demon', '🐉 Dragon', '👁️ Elder God'];
+    if (m) {
+      var level = parseInt(m[1], 10);
+      var reps = parseInt(m[2], 10);
+      var ms = parseInt(m[3], 10);
+      var sec = Math.round(ms / 1000);
+      var mm = Math.floor(sec / 60);
+      var ss = sec % 60;
+      var monster = MONSTERS[Math.max(0, Math.min(level - 1, MONSTERS.length - 1))] || '👹 Boss';
+      var parts = monster.split(' ');
+      document.getElementById('emoji').textContent = parts[0];
+      document.getElementById('title').textContent = 'Beat ' + parts[1] + '?';
+      document.getElementById('lead').textContent = 'A friend just defeated ' + monster + ' on PushBoss. Think you can beat them?';
+      document.getElementById('reps').textContent = reps;
+      document.getElementById('time').textContent = mm + ':' + (ss < 10 ? '0' + ss : ss);
+      // Try to open app via deep link first
+      setTimeout(function () {
+        window.location = 'pushboss://challenge/' + level + '/' + reps + '/' + ms;
+      }, 250);
+      // Fallback to App Store
+      setTimeout(function () {
+        window.location = 'https://apps.apple.com/app/id6762020951';
+      }, 1500);
+    } else {
+      setTimeout(function () {
+        window.location = 'https://apps.apple.com/app/id6762020951';
+      }, 1500);
+    }
+  </script>
+</body>
+
 </html>
